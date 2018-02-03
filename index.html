@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Parallax Scrolling</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.content {
+			height: 1500px;
+			background-color: #333;
+		}
+
+		.parallax-bg {
+			padding: 300px 0;
+			background-image: url(image.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			-webkit-transition: all 0.2s ease;
+			-moz-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+		}
+
+		.parallax-bg h1 {
+			text-align: center;
+			text-transform: uppercase;
+			color: #fff;
+			font-size: 70px;
+			font-family: Arial;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="parallax-bg">
+			<h1>Hello Everybody</h1>	
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+        var documentEl = $(document),
+            parallaxBg = $('div.parallax-bg');
+
+        documentEl.on('scroll', function () {
+            var currScrollPos = documentEl.scrollTop();
+            console.log(currScrollPos);
+            parallaxBg.css('background-position', '0 ' + -currScrollPos/4 + 'px');
+        })
+        // $(window).scroll(function(){
+        //     console.log($(this).scrollTop());
+        // })
+    }
+</script>
+</html>
