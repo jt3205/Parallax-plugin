@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo2</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.div1 {
+			height: 800px;
+		}
+		.content {
+			height: 900px;
+			background-image: url('demo2 bg.jpg');
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		
+	</div>
+	<div class="content">
+		
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="parallax.js"></script>
+<script type="text/javascript">
+	window.onload = function () {
+		$(".content").parallax(-5);
+	}
+</script>
+</html>
