@@ -9,18 +9,19 @@
 			padding: 0;
 		}
 		.content {
-			height: 1500px;
+			height: 1200px;
 			background-color: #333;
 		}
 
 		.parallax-bg {
-			padding: 300px 0;
+			height: 650px;
 			background-image: url(image.jpg);
 			background-size: cover;
 			background-attachment: fixed;
+			padding-top: 400px;
 		}
 
-		.parallax-bg h1 {
+		.parallax-bg > h1 {
 			text-align: center;
 			text-transform: uppercase;
 			color: #fff;
@@ -30,17 +31,17 @@
 	</style>
 </head>
 <body>
-	<div class="content">
 		<div class="parallax-bg">
 			<h1>Hello Everybody</h1>	
 		</div>
+	<div class="content">
 	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="parallax.js"></script>
 <script type="text/javascript">
 	window.onload = function () {
-		$(".parallax-bg").parallax(1.2);
+		$(".parallax-bg").parallax(1.5);
 	}
 </script>
 </html>
